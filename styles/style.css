@@ -56,6 +56,7 @@ body.dark{
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+    --red-color: #ff0000;
 }
 
 /* ===== Sidebar ===== */
@@ -552,8 +553,11 @@ body.dark .profile__btn:hover {
     box-shadow: -12px 12px 8px rgba(0, 0, 0, 0.20);
 }
 
-.card-2:hover i {
-    color: var(--sidebar-color);
-    transition: 0.5s;
+body.dark .card-2:hover {
+    background-color: var(--red-color);
 }
 
+.card-2:hover i {
+    color: var(--primary-color);
+    transition: 0.5s;
+}
