@@ -547,7 +547,6 @@ body.dark .profile__btn:hover {
 
 .card-2:hover {
     background-color: var(--primary-color);
-    color: var(--sidebar-color);
     border: none;
     transition: 0.5s;
     box-shadow: -12px 12px 8px rgba(0, 0, 0, 0.20);
@@ -558,6 +557,6 @@ body.dark .card-2:hover {
 }
 
 .card-2:hover i {
-    color: var(--primary-color);
+    color: #fff;
     transition: 0.5s;
 }
