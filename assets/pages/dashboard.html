@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Link naar CSS -->
+        <link rel="stylesheet" href="../styles/dashboard.css"/>
+        <link rel="stylesheet" href="../styles/main.css">
+        <!-- Link naar boxicons -->
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+        <link rel="icon" type="image/x-icon" href="../image/favicon.ico">
+        <!-- Link naar javascript -->
+        <script src="../scripts/script.js" defer></script>
+        <title>Mijn OBA</title>
+    </head>
+
+    <body>
+        
+        <header class="header">
+            <button id="hamburger-menu" role="button"> <img src="../image/menu-svgrepo-com.svg" alt="open menu"> </button>
+            <div class="oba-logo"><img src="../image/oba_20.png" alt=""/></div>
+        </header>
+
+        <!-- NAVBAR -->
+        <nav class="sidebar close">
+            <header>
+                <a onclick="switchTab(event, 'profile')" href="#">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="../image/fatima pfp.jpeg" alt="Gebruiker-foto"/>
+                        </div>
+                        <div class="text logo-text">
+                            <span class="name">Fatima</span> 
+                            <span class="profession">1 jaar lid</span>
+                        </div>
+                    </div>
+                </a>
+                <i class="bx bx-chevron-right toggle-navbar"></i>
+            </header>
+            <div class="menu-bar">
+                <div class="menu">
+                    <li class="search-box">
+                        <i class="bx bx-search icon"></i>
+                        <input type="text" placeholder="Zoek..."/>
+                    </li>
+                    <ul class="menu-links">
+                        <li id="home-label" class="nav-link tablinks" onclick="switchTab(event, 'home')">
+                            <a href="#">
+                                <i class="bx bx-home icon"></i>
+                                <span class="text nav-text">Welkom</span>
+                            </a>
+                        </li>
+                        <li class="nav-link tablinks" onclick="switchTab(event, 'reading-list')">
+                            <a href="#">
+                                <i class="bx bx-list-ul icon"></i>
+                                <span class="text nav-text">Leeslijst</span>
+                            </a>
+                        </li>
+                        <li class="nav-link tablinks" onclick="switchTab(event, 'borrows-extensions')">
+                            <a href="#">
+                                <i class="bx bx-bar-chart-alt-2 icon"></i>
+                                <span class="text-long nav-text">Uitleningen</span>
+                            </a>
+                        </li>
+                        <li class="nav-link tablinks" onclick="switchTab(event, 'borrow-history')">
+                            <a href="#">
+                                <i class="bx bx-history icon"></i>
+                                <span class="text nav-text">Uitleengeschiedenis</span>
+                            </a>
+                        </li>
+                        <li class="nav-link tablinks" onclick="switchTab(event, 'payment-history')">
+                            <a href="#">
+                                <i class="bx bx-money icon"></i>
+                                <span class="text nav-text">Betaalgeschiedenis</span>
+                            </a>
+                        </li>
+                        <li class="nav-link tablinks" onclick="switchTab(event, 'reservations')">
+                            <a href="#">
+                                <i class="bx bx-bell icon"></i>
+                                <span class="text nav-text">Reserveringen</span>
+                            </a>
+                        </li>
+                        <li class="nav-link tablinks" onclick="switchTab(event, 'depositos')">
+                            <a href="#">
+                                <i class="bx bx-wallet icon"></i>
+                                <span class="text nav-text">Deposito's</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="./profile.html">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="text nav-text">Ander profiel</span>
+                        </a>
+                    </li>
+                    <li class="nav-link tablinks" onclick="switchTab(event, 'settings')">
+                        <a href="#">
+                            <i class="bx bxs-cog icon"></i>
+                            <span class="text nav-text">Instellingen</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+        
+        <main>
+            <!-- PROFIEL -->
+            <section class="home tabcontent" id="profile">
+                <div class="oba-logo"><img src="../image/oba_20.png" alt="oba-logo"/></div>
+                <h2 class="section-header">
+                    <i class="bx bx-list-ul icon"></i>
+                    Profiel
+                </h2>
+                <div class="profile-content">
+                    <div class="image">
+                        <img src="../image/fatima pfp.jpeg" alt="Gebruiker-foto"/>
+                    </div>                    <div class="user-info">
+                        <p>Name: Fatima</p>
+                        <p>Email: fatima.elamrani@example.com</p>
+                        <p>Member Since: January 1, 2023</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HOMEPAGINA -->
+            <section class="home tabcontent" id="home">
+                <div class="search-box-home">
+                    <i class="bx bx-search icon"></i>
+                    <input type="text" placeholder="Zoeken"/>
+                </div> 
+                <div class="welcome-container">
+                    <h2 class="big left">Welkom terug, <span class="special-text">Fatima</span></h2>
+                    <div class="oba-logo"><img src="../image/oba.png" alt=""/></div>
+                    <button class="button" role="link" onclick="switchTab(event, 'reading-list')">
+                        <a href="#">
+                            Mijn leeslijst
+                            <svg fill="#fff" width="10" height="10">
+                                <polygon points="0,0 10,5 0,10 "/>
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+                <h2 class="left to-big-for-mobile">Nieuw in de collectie &gt;</h2>
+                <div class="books-row">
+                    <ul>
+                        <li>
+                            <img class="oba-book" src="../image/book3.jpg" alt="Booth">
+                            Booth
+                        </li>
+                        <li>
+                            <img class="oba-book" src="../image/book3.jpg" alt="Booth">
+                            Booth
+                        </li>
+                        <li>
+                            <img class="oba-book" src="../image/book3.jpg" alt="Booth">
+                            Booth
+                        </li>
+                        <li>
+                            <img class="oba-book" src="../image/book3.jpg" alt="Booth">
+                            Booth
+                        </li>
+                        <li>
+                            <img class="oba-book" src="../image/book3.jpg" alt="Booth">
+                            Booth
+                        </li>
+                        <li>
+                            <img class="oba-book" src="../image/book3.jpg" alt="Booth">
+                            Booth
+                        </li>
+                        <li>
+                            <img class="oba-book" src="../image/book3.jpg" alt="Booth">
+                            Booth
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- LEESLIJST -->
+            <section class="home tabcontent" id="reading-list">
+                <h2 class="section-header">
+                    <i class="bx bx-list-ul icon"></i>
+                    Leeslijst
+                </h2>
+                <ul class="reading-list">
+                    <li class="book-readinglist">
+                        <img class="oba-book" src="../image/book3.jpg" alt="Booth">
+                        <div class="list-text">
+                            <h3>Joy Fowler, Karen</h3>
+                            <h1>Booth</h1>
+                            <p class="info-book">
+                                Vanuit het gezichtspunt van verschillende familieleden wordt een beeld 
+                                geschetst van het turbulente leven van de familie van John Wilkes Booth, 
+                                de moordenaar ...</p>
+                        </div>
+                        <button class="button reserve" role="button"><i class="bx bx-bell icon"></i>Reserveer</button>
+                    </li>
+                    <li class="book-readinglist">
+                        <img class="oba-book" src="../image/book3.jpg" alt="Booth">
+                        <div class="list-text">
+                            <h3>Joy Fowler, Karen</h3>
+                            <h1>Booth</h1>
+                            <p class="info-book">
+                                Vanuit het gezichtspunt van verschillende familieleden wordt een beeld 
+                                geschetst van het turbulente leven van de familie van John Wilkes Booth, 
+                                de moordenaar ...</p>
+                        </div>
+                        <button class="button reserve" role="button"><i class="bx bx-bell icon"></i>Reserveer</button>
+                    </li>
+                    <li class="book-readinglist">
+                        <img class="oba-book" src="../image/book3.jpg" alt="Booth">
+                        <div class="list-text">
+                            <h3>Joy Fowler, Karen</h3>
+                            <h1>Booth</h1>
+                            <p class="info-book">
+                                Vanuit het gezichtspunt van verschillende familieleden wordt een beeld 
+                                geschetst van het turbulente leven van de familie van John Wilkes Booth, 
+                                de moordenaar ...</p>
+                        </div>
+                        <button class="button reserve" role="button"><i class="bx bx-bell icon"></i>Reserveer</button>
+                    </li>
+                    <li class="book-readinglist">
+                        <img class="oba-book" src="../image/book3.jpg" alt="Booth">
+                        <div class="list-text">
+                            <h3>Joy Fowler, Karen</h3>
+                            <h1>Booth</h1>
+                            <p class="info-book">
+                                Vanuit het gezichtspunt van verschillende familieleden wordt een beeld 
+                                geschetst van het turbulente leven van de familie van John Wilkes Booth, 
+                                de moordenaar ...</p>
+                        </div>
+                        <button class="button reserve" role="button"><i class="bx bx-bell icon"></i>Reserveer</button>
+                    </li>
+                </div>
+            </section>
+            
+            <section class="home tabcontent" id="borrows-extensions">
+                <h2 class="section-header">
+                    <i class="bx bx-bar-chart-alt-2 icon"></i>
+                    Uitleningen
+                </h2>
+            </section>
+            
+            <section class="home tabcontent" id="borrow-history">
+                <h2 class="section-header">
+                    <i class="bx bx-history icon"></i>
+                    Uitleengeschiedenis
+                </h2>
+                <div class="borrowHistory-wrapper">
+                    <div class="flex-container">
+                        <div class="book-container">
+                            <img src="../image/book-1.png" alt="book1">
+                            <h4>The Art City</h4>
+                            <p>Uitleendatum: Nov 2023</p>
+                        </div>
+
+                        <div class="book-container">
+                            <img src="../image/book-2.png" alt="book2">
+                            <h4>Thanks In Everything</h4>
+                            <p>Uitleendatum: Sep 2023</p>
+                        </div>
+
+                        <div class="book-container">
+                            <img src="../image/book-3.png" alt="book3">
+                            <h4>Your Name</h4>
+                            <p>Uitleendatum: Sep 2023</p>
+                        </div>
+
+                        <div class="book-container">
+                            <img src="../image/book-4.png" alt="book4">
+                            <h4>The Hand</h4>
+                            <p>Uitleendatum: Okt 2023</p>
+                        </div>
+
+                        <div class="book-container">
+                            <img src="../image/book-7.png" alt="book7">
+                            <h4>Red Tower</h4>
+                            <p>Uitleendatum: Jul 2023</p>
+                        </div>
+
+                        <div class="book-container">
+                            <img src="../image/book-6.png" alt="book6">
+                            <h4>Green Grass</h4>
+                            <p>Uitleendatum: Feb 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="home tabcontent" id="payment-history">
+                <h2 class="section-header">
+                    <i class="bx bx-money icon"></i>
+                    Betaalgeschiedenis
+                </h2>
+
+                <div>
+                    <p>
+                        In het overzicht hieronder kunt u de recente bij- en afschriften van uw profiel bekijken.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3>Afgelopen transacties</h3>
+                    <ul>
+                        <li>
+                          <input type="radio" id="rd1" name="rd">
+                          <label class="history-open" for="rd1"><time>30 November, 2023</time><p>€5,80</p></label>
+                          <p>
+                            Boete: Harry potter en het vervloekte kind
+                          </p>
+                        </li>
+                        <li>
+                          <input type="radio" id="rd2" name="rd">
+                          <label class="history-open" for="rd2"><time>24 November, 2023</time><p>€3,30</p></label>
+                          <p>
+                            Maandelijks incasso: abbonement
+                          </p>
+                        </li>
+                        <li>
+                          <input type="radio" id="rd3" name="rd">
+                          <label class="history-open" for="rd3"><time>2 November, 2023</time><p>€2,08</p></label>
+                          <p>
+                            Extra computeruren (+4)
+                          </p>
+                        </li>
+                        <li>
+                          <input type="radio" id="rd4" name="rd">
+                          <label class="history-open" for="rd4"><time>24 Oktober, 2023</time><p>€3,30</p></label>
+                          <p>
+                            Maandelijks incasso: abbonement
+                          </p>
+                        </li>
+                        <li>
+                          <input type="radio" id="rd5" name="rd">
+                          <label class="history-open" for="rd5"><time>24 September, 2023</time><p>€3,30</p></label>
+                          <p>
+                            Maandelijks incasso: abbonement
+                        </p>
+                        </li>
+                        <li>
+                          <input type="radio" id="rd6" name="rd">
+                          <label class="history-open" for="rd6"><time>3 September, 2023</time><p>€0,88</p></label>
+                          <p>
+                            Boete: De wraak van het spruitje
+                          </p>
+                        </li>
+                        <li>
+                          <input type="radio" id="rd7" name="rd">
+                          <label for="rd7" class="history-close">Sluiten &times;</label>
+                        </li>
+                      </ul>
+                </div>
+            </section>
+            
+            <section class="home tabcontent" id="reservations">
+                <h2 class="section-header">
+                    <i class="bx bx-bell icon"></i>
+                    Reserveringen
+                </h2>
+                <div class="reservation-wrapper">
+                    <h3>Er zijn momenteel geen reserveringen.</h3>
+                    <img src="../image/oba_20.png" alt="logo">
+                </div>
+            </section>
+            
+            <section class="home tabcontent" id="depositos">
+                <h2 class="section-header">
+                    <i class="bx bx-wallet icon"></i>
+                    Deposito's
+                </h2>
+
+                <div>
+                    <p>Hier kunt u uw OBA lenerstegoed opwaarderen, dit wordt gebruikt als u het maandelijkse limiet van tegoed overschrijdt.</p>
+                    <p>Onder <a onclick="switchTab(event, 'payment-history')" href="#"><strong>betaalgeschiedenis</strong></a> vind u informatie over afgelopen transacties terug.</p>
+                </div>
+
+                <div>
+                    <div>
+                        <h3>Huidig tegoed</h3>
+                        <b>€24,86</b>
+                    </div>
+                    <aside>
+                        <h3>Tegoed opwaarderen</h3>
+                        <form action="#">
+                            <label for="amount">Bedrag:</label>
+                            <input type="text" id="-deposit-amount" name="deposit amount" required>
+                            <input type="submit" value="Betalen">
+                          </form>
+
+                          <div>
+                            Betaalmethode:
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><path d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4 .7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9 .7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><path d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><path d="M125.6 165.5a49.1 49.1 0 1 0 49.1 49.1A49.1 49.1 0 0 0 125.6 165.5zM86.2 425.8h78.9V285.3H86.2zm151.5-211.6c0-20-10-22.5-18.7-22.5H204.8V237.5h14.1C228.6 237.5 237.6 234.7 237.6 214.2zm201.7 46V168.9h22.8V237.5h33.7C486.5 113.1 388.6 86.2 299.7 86.2H204.8V169h14c25.6 0 41.5 17.4 41.5 45.3 0 28.8-15.5 46-41.5 46h-14V425.9h94.8c144.6 0 194.9-67.2 196.7-165.6zm-109.8 0H273.3V169h54.4v22.7H296v10.6h30V225H296V237.5h33.5zm74.7 0-5.2-17.7H369.3l-5.2 17.7H340.5L368 168.9h32.4l27.5 91.3zM299.7 32H32V480H299.7c161.9 0 251-79.7 251-224.5C550.6 172 518 32 299.7 32zm0 426.9H53.1V53.1H299.7c142.1 0 229.9 64.6 229.9 202.4C529.6 389.6 448.6 458.9 299.7 458.9zm83.9-264.9L376 219.9H392.4l-7.5-25.8z"/></svg>
+                          </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="home tabcontent" id="settings">
+                <h2 class="section-header">
+                    <i class="bx bxs-cog icon"></i>
+                    Instellingen
+                </h2>
+                <label for="darkmode">Donker thema</label>
+                <label for="darkmode" class="toggle-checkbox">
+                    <input type="checkbox" id="darkmode">
+                    <div class="round"></div>
+                </label>
+            </section>
+        </main>
+    </body>
+</html>
