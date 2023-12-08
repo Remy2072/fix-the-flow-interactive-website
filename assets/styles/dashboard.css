@@ -232,7 +232,7 @@ section .text {
 
 section#home .welcome-container {
     background-color: var(--sidebar-color);
-    border-radius: 2rem;
+    border-radius: 10px;
     height: 30vh;
     padding: 2rem;
     margin-bottom: 7vh;
@@ -245,7 +245,7 @@ section#home .welcome-container p {
 
 section#borrow-history .borrowHistory-wrapper {
     background-color: var(--sidebar-color);
-    border-radius: 1rem;
+    border-radius: 10px;
     height: auto;
     padding: 2rem;
 }
@@ -297,7 +297,7 @@ section#borrow-history img {
 
 section#reservations .reservation-wrapper {
     background-color: var(--sidebar-color);
-    border-radius: 1rem;
+    border-radius: 10px;
     height: auto;
     padding: 2rem;
     display: flex;
@@ -376,8 +376,12 @@ section#reservations h3 {
 }
 .button {
     color: #fff;
-    background-color: #18191a;
+    background-color: var(--color-deepSkyBlue);
     cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color-seaGreen);
 }
 
 .section-header {
@@ -432,10 +436,12 @@ section#reservations h3 {
     align-items: center;
     justify-content: space-between;
     height: calc(20vh + 3vw + 3vh);
+    border-radius: 5px;
 }
 
 .books-row ul li img {
     max-height: 20vh;
+    border-radius: 3px;
 }
 
 .reserve {
@@ -556,7 +562,7 @@ section#depositos {
         background-color: var(--sidebar-color);
         height: auto;
         padding: 2rem;
-        border-radius: 1rem;
+        border-radius: 10px;
         color: var(--text-color);
     }
 
@@ -567,7 +573,7 @@ section#depositos {
 
             & > a {
               display: inline-block;
-              color: red;
+              color: var(--color-deepPink);
             }
             
             & > a::after {
@@ -576,7 +582,7 @@ section#depositos {
               height: 2px;
               display: block;
               transition: var(--tran-02);
-              background: red;
+              background: var(--color-deepPink);
             }
               
             & > a:hover::after {
@@ -698,13 +704,13 @@ section#payment-history {
               }
         
               & > label.history-open:hover {
-                background-color: var(--primary-color);
+                background-color: var(--color-seaGreen);
                 color: var(--text-color);
               }
         
               & input:checked + .history-open {
-                background-color: var(--primary-color);
-                color: var(--text-color);
+                background-color: var(--color-seaGreen);
+                color: var(--sidebar-color);
               }
         
               & input:checked + .history-open::after {

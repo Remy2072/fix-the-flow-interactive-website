@@ -41,7 +41,6 @@ function setDarkMode(value) {
 
 setDarkMode(getCookie("darkmode") === "true" ?? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches));
 
-// check if browser color scheme is changed
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
     console.log("system change", event.matches)
     console.log(getCookie("darkmode"))
