@@ -1,19 +1,21 @@
-const button = document.querySelector(".login__button");
-const img = document.getElementById("bounce");
+const button = document.querySelector('.login__button');
+const img = document.getElementById('bounce');
+const form = document.querySelector('#ismForm');
 
-button.addEventListener("click", function () {
-    const myInput = document.getElementById("input-1");
-    const myInput2 = document.getElementById("input-2");
-    if (myInput && myInput.value && myInput2 && myInput2.value) {
-        img.classList.add("start-bouncing");
+form.addEventListener('submit', function (event) {
+    event.preventDefault()
+})
+
+button.addEventListener('click', function () {
+    const myInput = document.getElementById('input-1');
+    const myInput2 = document.getElementById('input-2');
+    if (myInput.value!= '' && myInput2.value!='') {
+        img.classList.add('start-bouncing');
+        console.log('myInput.value!=')
     }
 });
 
 img.onanimationend = () => {
-    img.classList.remove("start-bouncing");
+    img.classList.remove('start-bouncing');
+    window.location.href = './assets/pages/profile.html'
 };
-
-
-// if (document.getElementById("ismForm")) {
-//     setTimeout("submitForm()", 5000); // set timout 
-// }
