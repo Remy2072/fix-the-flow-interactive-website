@@ -326,13 +326,11 @@ section#reservations h3 {
 .book-readinglist {
     border-radius: 10px;
     background-color: var(--sidebar-color);
-    width: 50em;
+    width: 100%;
     height: 200px;
     padding: 20px;
     display: flex;
-    width: 80vw;
     left: 10vw;
-    display: flex;
     gap: 5vw;
 }
 
