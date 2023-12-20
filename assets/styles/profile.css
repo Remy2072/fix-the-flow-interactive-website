@@ -24,6 +24,13 @@ h2 {
     box-shadow: -12px 12px 8px rgba(0, 0, 0, 0.20);
 }
 
+.card-2 {
+    background-color: var(--accent-colorDark);
+    width: 450px;
+    height: 250px;
+    border-radius: 12px;
+}
+
 .card__container {
     padding: 15px 30px 15px 30px;
 }
@@ -68,7 +75,7 @@ li {
 }
 
 .profile__btn {
-    background: #ff2500;
+    background: var(--color-deepSkyBlue);
     color: #fff;
     font-size: 20px;
     width: 100px;
@@ -76,27 +83,26 @@ li {
     border: none;
     border-radius: 10px;
     padding: 0;
-}
-
-
-
-.profile__logout-position {
-    width: auto;
-    height: auto;
-    margin-top: 1rem;
     display: flex;
-    justify-content: end;
-
-    & a {
-        padding: .5rem 1rem;
-        border-radius: 1.5rem;
-        background-color: var(--sidebar-color);
-        color: var(--text-color);
-    }
+    align-items: center;
+    justify-content: center;
 }
 
-@media screen and (min-width: 1474px) {
-    .profile__logout-position {
-        margin-top: 7rem;
-    }
+.profile__btn:hover {
+    background-color: var(--color-seaGreen);
+}
+
+.profile__logout {
+    padding: .5rem 1rem;
+    border-radius: 1.5rem;
+    background-color: var(--color-deepSkyBlue);
+    color: var(--sidebar-color);
+    position: relative;
+    bottom: calc(1% + 1rem);
+    left: calc(87% - 4rem);
+    transition: 0.1s;
+}
+
+.profile__logout:hover {
+    background-color: var(--color-seaGreen);
 }
